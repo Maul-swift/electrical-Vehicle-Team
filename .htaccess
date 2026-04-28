@@ -1,0 +1,11 @@
+# Blokir akses langsung ke folder app/
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^app/ - [F,L]
+</IfModule>
+
+# Blokir akses ke .env
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
